@@ -18,3 +18,10 @@ export interface ButtonProps {
 export interface NavbarProps {
   className?: string
 }
+
+export interface ContentWrapperProps {
+  title: string
+  description: string
+  children: React.ReactNode
+  image?: string
+}
