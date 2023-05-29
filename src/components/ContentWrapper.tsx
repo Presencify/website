@@ -1,17 +1,28 @@
 import type { ContentWrapperProps } from "@/interfaces"
 import type { FC } from "react"
+import Image from "next/image"
 
-const ContentWrapper: FC<ContentWrapperProps> = ({ title, description, children, image }) => {
+const ContentWrapper: FC<ContentWrapperProps> = ({
+  sectionClassName,
+  containerClassName,
+  titleClassName,
+  title,
+  description,
+  children,
+  image
+}) => {
   return (
-    <section className="h-full flex justify-center items-center mt-[77px] backdrop-filter">
-      <div className="w-full max-w-[1200px] flex flex-wrap items-center gap-20 p-5">
-        <div className="w-full lg:flex-1 flex flex-col gap-5">
-          <h1 className="text-3xl lg:text-6xl font-bold">{title}</h1>
+    <section className={`h-screen flex justify-center items-center ${sectionClassName}`}>
+      <div
+        className={`h-max w-full max-w-[1200px] flex items-center justify-center flex-wrap md:flex-nowrap gap-x-20 gap-y-10 ${containerClassName}`}
+      >
+        <div className="w-full lg:w-2/4 flex flex-col gap-5">
+          <h1 className={`text-3xl lg:text-6xl font-bold ${titleClassName}`}>{title}</h1>
           <p className="text-gray-400 text-base lg:text-lg">{description}</p>
           {children}
         </div>
-        <div className="w-full lg:flex-1 border border-green-1 rounded-md h-80 flex justify-center items-center">
-          <p>Presencify photo</p>
+        <div className="w-2/4 rounded-md h-80 flex justify-center items-center">
+          <Image src={image} alt="image" className="w-full object-cover" />
         </div>
       </div>
     </section>
