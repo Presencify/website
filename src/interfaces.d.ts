@@ -1,4 +1,5 @@
 import { Url } from "next/dist/shared/lib/router/router"
+import { StaticImageData } from "next/image"
 
 export type Variants = {
   green: string
@@ -20,8 +21,11 @@ export interface NavbarProps {
 }
 
 export interface ContentWrapperProps {
+  sectionClassName?: string
+  containerClassName?: string
+  titleClassName?: string
   title: string
   description: string
   children: React.ReactNode
-  image?: string
+  image?: StaticImport
 }
