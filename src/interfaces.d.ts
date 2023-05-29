@@ -14,3 +14,7 @@ export interface ButtonProps {
   children: React.ReactNode
   disabled?: boolean
 }
+
+export interface NavbarProps {
+  className?: string
+}

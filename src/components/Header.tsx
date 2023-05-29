@@ -1,6 +1,6 @@
 import Logo from "../../public/logo-black.svg"
-import { SectionsEnum } from "@/enums.d"
 import type { FC } from "react"
+import Navbar from "./Navbar"
 
 const Header: FC = () => {
   return (
@@ -8,19 +8,9 @@ const Header: FC = () => {
       <section className="w-full max-w-[1200px] h-max flex justify-between items-center">
         <div className="flex items-center gap-3">
           <Logo className="w-9 h-9" />
-          <h1 className="text-xl font-bold tracking-wide">Presencify</h1>
+          <h1 className="text-lg lg:text-xl font-bold tracking-wide">Presencify</h1>
         </div>
-        <nav>
-          <ul className="flex gap-16">
-            {Object.values(SectionsEnum).map((section, index) => (
-              <li key={index} className="hover:text-green-1">
-                <a href={`#${section}`} className="text-lg">
-                  {section}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Navbar />
       </section>
     </header>
   )
