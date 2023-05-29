@@ -9,7 +9,7 @@ const variants: Variants = {
 }
 
 const defaultClassName =
-  "w-max flex gap-3 lg:gap-5 font-bold focus:outline-none text-white cursor-pointer flex justify-center items-center text-base lg:text-base px-3 py-[6px] lg:px-10 lg:py-4 box-border duration-75 text-center rounded-md text-black"
+  "w-max flex gap-3 lg:gap-5 font-bold focus:outline-none text-white cursor-pointer flex justify-center items-center text-base lg:text-base px-7 py-[8px] lg:px-10 lg:py-4 box-border duration-75 text-center rounded-md text-black"
 
 const Button: FC<ButtonProps> = ({
   variant,

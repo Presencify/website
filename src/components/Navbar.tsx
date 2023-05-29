@@ -1,5 +1,5 @@
 import { SectionsEnum } from "@/enums.d"
-import { NavbarProps } from "@/interfaces"
+import type { NavbarProps } from "@/interfaces.d"
 import type { FC } from "react"
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
