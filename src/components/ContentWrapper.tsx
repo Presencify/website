@@ -21,9 +21,11 @@ const ContentWrapper: FC<ContentWrapperProps> = ({
           <p className="text-gray-400 text-base lg:text-lg">{description}</p>
           {children}
         </div>
-        <div className="w-[400px] rounded-md h-80 flex justify-center items-center absolute right-0 top-0">
-          <Image src={image} alt="image" className="w-full object-cover" />
-        </div>
+        {image && (
+          <div className="w-[400px] rounded-md h-80 flex justify-center items-center absolute right-0 top-0">
+            <Image src={image} alt="image" className="w-full object-cover" />
+          </div>
+        )}
       </div>
     </section>
   )

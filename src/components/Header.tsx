@@ -1,8 +1,8 @@
 "use client"
 import Navbar from "./Navbar"
-import Logo from "../../public/logo-black.svg"
 import { useState, type FC } from "react"
 import { Bars4Icon } from "@heroicons/react/24/solid"
+import Logo from "./Logo"
 
 const Header: FC = () => {
   const [showResponsiveNavbar, setShowResponsiveNavbar] = useState(false)
@@ -14,10 +14,7 @@ const Header: FC = () => {
   return (
     <header className="flex justify-center fixed inset-0 w-full h-max border-b-[.5px] border-b-gray-700 p-5 backdrop-filter backdrop-blur-sm backdrop-contrast-00 bg-[#1815268b] z-10">
       <section className="w-full max-w-[1200px] h-max flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <Logo className="w-9 h-9" />
-          <h1 className="text-lg lg:text-xl font-bold tracking-wide">Presencify</h1>
-        </div>
+        <Logo />
         <button onClick={handleShowResponsiveNavbar}>
           <Bars4Icon className="w-6 h-6 sm:hidden" />
         </button>

@@ -29,3 +29,9 @@ export interface ContentWrapperProps {
   children: React.ReactNode
   image?: StaticImport
 }
+
+export interface LogoProps {
+  containerClassName?: string
+  logoClassName?: string
+  titleClassName?: string
+}
