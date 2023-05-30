@@ -33,10 +33,11 @@ const Features: FC = () => {
       titleClassName="!text-2xl lg:!text-5xl"
       description=""
       image={presencifyFeaturesImage}
+      inverted={true}
     >
-      <ul className="flex flex-wrap lg:grid lg:grid-cols-2 gap-28 mt-5">
+      <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-2 gap-28 mt-5">
         {Object.entries(features).map(([key, value]) => (
-          <li key={key} className="flex gap-1 items-center flex-col">
+          <li key={key} className="flex gap-1 items-center flex-col justify-self-end">
             {value.image}
             <p className="text-gray-400 text-base lg:text-lg">{value.title}</p>
           </li>

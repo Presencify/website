@@ -9,7 +9,7 @@ const PresencesList: FC = () => {
       sectionClassName="!h-max"
       titleClassName="!text-2xl lg:!text-5xl"
       title="Choose your desired presence"
-      description="Browse through our list of presence and choose the one you need."
+      description="Browse through our list of presence and choose the one you need. Every presence is created by our community and is free to use."
       image={presencesNetwork}
     >
       <Button variant="green" type="button">

@@ -1,10 +1,11 @@
 import Header from "@/components/Header"
+import ReadyToDownload from "@/sections/ReadyToDownload"
 import PresencesList from "@/sections/PresencesList"
 import Features from "@/sections/Features"
+import Discord from "@/sections/Discord"
+import Footer from "@/sections/Footer"
 import Hero from "@/sections/Hero"
 import type { FC } from "react"
-import ReadyToDownload from "@/sections/ReadyToDownload"
-import Footer from "@/sections/Footer"
 
 const Home: FC = () => {
   return (
@@ -13,6 +14,7 @@ const Home: FC = () => {
       <Hero />
       <PresencesList />
       <Features />
+      <Discord />
       <ReadyToDownload />
       <Footer />
     </div>

@@ -28,6 +28,7 @@ export interface ContentWrapperProps {
   description: string
   children: React.ReactNode
   image?: StaticImport
+  inverted?: boolean
 }
 
 export interface LogoProps {
