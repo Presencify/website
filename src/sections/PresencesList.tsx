@@ -7,7 +7,7 @@ const PresencesList: FC = () => {
   return (
     <ContentWrapper
       sectionClassName="!h-max"
-      titleClassName="text-2xl lg:text-5xl"
+      titleClassName="!text-2xl lg:!text-5xl"
       title="Choose your desired presence"
       description="Browse through our list of presence and choose the one you need."
       image={presencesNetwork}

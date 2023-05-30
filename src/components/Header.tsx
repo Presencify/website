@@ -12,7 +12,7 @@ const Header: FC = () => {
   }
 
   return (
-    <header className="flex justify-center fixed inset-0 w-full h-max border-b-[.5px] border-b-gray-700 p-5 backdrop-filter backdrop-blur-sm backdrop-contrast-00 bg-[#1815268b]">
+    <header className="flex justify-center fixed inset-0 w-full h-max border-b-[.5px] border-b-gray-700 p-5 backdrop-filter backdrop-blur-sm backdrop-contrast-00 bg-[#1815268b] z-10">
       <section className="w-full max-w-[1200px] h-max flex justify-between items-center">
         <div className="flex items-center gap-3">
           <Logo className="w-9 h-9" />

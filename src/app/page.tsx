@@ -1,5 +1,6 @@
-import PresencesList from "@/sections/PresencesList"
 import Header from "@/components/Header"
+import PresencesList from "@/sections/PresencesList"
+import Features from "@/sections/Features"
 import Hero from "@/sections/Hero"
 import type { FC } from "react"
 
@@ -9,6 +10,7 @@ const Home: FC = () => {
       <Header />
       <Hero />
       <PresencesList />
+      <Features />
     </div>
   )
 }
