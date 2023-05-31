@@ -5,6 +5,7 @@ import Features from "@/sections/Features"
 import Discord from "@/sections/Discord"
 import Footer from "@/sections/Footer"
 import Hero from "@/sections/Hero"
+import FAQ from "@/sections/FAQ"
 import type { FC } from "react"
 import CirclesImage from "../../public/circles-image.svg"
 
@@ -19,6 +20,7 @@ const Home: FC = () => {
         <Features />
         <Discord />
       </div>
+      <FAQ />
       <ReadyToDownload />
       <Footer />
     </div>

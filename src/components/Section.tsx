@@ -28,7 +28,7 @@ const Container: FC<ContainerProps> = ({ className, inverted, children }) => {
 }
 
 const ContentContainer: FC<ContentContainerProps> = ({ children, className }) => (
-  <div className={`w-full lg:w-2/4 flex flex-col gap-5 ${className}`}>{children}</div>
+  <div className={`w-full lg:w-2/4 flex flex-col gap-10 ${className}`}>{children}</div>
 )
 
 const Title: FC<TitleProps> = ({ className, title, inverted }) => (
