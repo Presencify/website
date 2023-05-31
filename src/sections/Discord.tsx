@@ -9,7 +9,10 @@ const Discord: FC = () => {
       <Section.Container>
         <Section.ContentContainer>
           <Section.Title className="!text-2xl lg:!text-5xl text-center" title="Community Discord" />
-          <Section.Description description="Do you need help with something? Do you have a suggestion for us? Join our Discord server and let us know!" />
+          <Section.Description
+            className="whitespace-pre-line"
+            description={`Do you need help with something? Do you have a suggestion for us? \n Join our Discord server and let us know!`}
+          />
           <div className="w-full flex justify-center">
             <Button variant="green" type="button">
               Join our Discord

@@ -1,10 +1,12 @@
+import Image from "next/image"
 import Section from "@/components/Section"
 import Button from "@/components/Button"
 import type { FC } from "react"
+import horizontalLinesImage from "../../public/horizontal-lines.png"
 
 const ReadyToDownload: FC = () => {
   return (
-    <Section className="!h-[500px]">
+    <Section className="!h-[500px] relative">
       <Section.Container className="justify-center">
         <Section.ContentContainer>
           <Section.Title
@@ -18,6 +20,7 @@ const ReadyToDownload: FC = () => {
           </div>
         </Section.ContentContainer>
       </Section.Container>
+      <Image src={horizontalLinesImage} className="absolute pointer-events-none" alt="" />
     </Section>
   )
 }
