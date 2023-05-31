@@ -1,6 +1,7 @@
 import Logo from "@/components/Logo"
+import type { FC } from "react"
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <section className="w-full h-[100px] bg-dark flex justify-center">
       <div className="w-full max-w-[1200px] flex justify-between items-center border-t border-t-gray-700">
@@ -16,4 +17,5 @@ const Footer = () => {
     </section>
   )
 }
+
 export default Footer
