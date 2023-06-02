@@ -7,9 +7,7 @@ import Logo from "./Logo"
 const Header: FC = () => {
   const [showResponsiveNavbar, setShowResponsiveNavbar] = useState(false)
 
-  const handleShowResponsiveNavbar = () => {
-    setShowResponsiveNavbar(!showResponsiveNavbar)
-  }
+  const handleShowResponsiveNavbar = () => setShowResponsiveNavbar(!showResponsiveNavbar)
 
   return (
     <header className="flex justify-center fixed inset-0 w-full h-max border-b-[.5px] border-b-gray-700 p-5 backdrop-filter backdrop-blur-sm backdrop-contrast-00 bg-[#1815268b] z-10">
