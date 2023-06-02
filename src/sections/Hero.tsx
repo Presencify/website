@@ -6,6 +6,7 @@ import presencifyUsage from "../../public/presencify-usage.png"
 import { SectionsEnum } from "@/enums.d"
 import { SectionsInfo } from "@/constants/sectionsInfo"
 import { scrollToSection } from "@/utils/scrollToSection"
+import DownloadButton from "@/components/DownloadButton"
 
 const Hero: FC = () => {
   return (
@@ -15,9 +16,7 @@ const Hero: FC = () => {
           <Section.Title title={SectionsInfo.HOME.TITLE} />
           <Section.Description description={SectionsInfo.HOME.DESCRIPTION} />
           <div className="flex gap-5">
-            <Button variant="green" type="button">
-              Download
-            </Button>
+            <DownloadButton />
             <Button
               variant="transparent"
               type="button"

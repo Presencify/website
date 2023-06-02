@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Section from "@/components/Section"
-import Button from "@/components/Button"
 import { SectionsEnum } from "@/enums.d"
 import { SectionsInfo } from "@/constants/sectionsInfo"
 import type { FC } from "react"
 import horizontalLinesImage from "../../public/horizontal-lines.png"
+import DownloadButton from "@/components/DownloadButton"
 
 const Download: FC = () => {
   return (
@@ -20,9 +20,7 @@ const Download: FC = () => {
             title={SectionsInfo.DOWNLOAD.TITLE}
           />
           <div className="w-full flex justify-center">
-            <Button variant="green" type="button">
-              Download Now
-            </Button>
+            <DownloadButton />
           </div>
         </Section.ContentContainer>
       </Section.Container>
