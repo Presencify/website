@@ -2,7 +2,7 @@ export const SectionsInfo = {
   HOME: {
     TITLE: "Enhance your Discord presence",
     DESCRIPTION:
-      "Display real-time updates from your browser directly in your Discord status. No matters what site you are on, Presencify will show it in your status."
+      "Show your friends what you are doing on the web with Precensify. Display real-time updates from your browser directly in your Discord status."
   },
   PRECENSES: {
     TITLE: "Choose your desired presence",
