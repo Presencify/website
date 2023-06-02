@@ -2,10 +2,11 @@ import Image from "next/image"
 import Section from "@/components/Section"
 import Button from "@/components/Button"
 import { SectionsEnum } from "@/enums.d"
+import { SectionsInfo } from "@/constants/sectionsInfo"
 import type { FC } from "react"
 import horizontalLinesImage from "../../public/horizontal-lines.png"
 
-const ReadyToDownload: FC = () => {
+const Download: FC = () => {
   return (
     <Section className="!h-96 md:!h-screen relative">
       <Section.Container
@@ -16,7 +17,7 @@ const ReadyToDownload: FC = () => {
         <Section.ContentContainer>
           <Section.Title
             className="!text-2xl lg:!text-5xl text-center"
-            title="Are you ready to use Presencify?"
+            title={SectionsInfo.DOWNLOAD.TITLE}
           />
           <div className="w-full flex justify-center">
             <Button variant="green" type="button">
@@ -30,4 +31,4 @@ const ReadyToDownload: FC = () => {
   )
 }
 
-export default ReadyToDownload
+export default Download

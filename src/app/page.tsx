@@ -1,6 +1,6 @@
 import Header from "@/components/Header"
-import ReadyToDownload from "@/sections/ReadyToDownload"
 import PresencesList from "@/sections/PresencesList"
+import Download from "@/sections/Download"
 import Features from "@/sections/Features"
 import Discord from "@/sections/Discord"
 import Footer from "@/sections/Footer"
@@ -21,7 +21,7 @@ const Home: FC = () => {
         <Discord />
       </div>
       <FAQ />
-      <ReadyToDownload />
+      <Download />
       <Footer />
     </div>
   )

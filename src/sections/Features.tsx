@@ -1,4 +1,5 @@
 import Section from "@/components/Section"
+import { SectionsInfo } from "@/constants/sectionsInfo"
 import { SectionsEnum } from "@/enums.d"
 import type { FC } from "react"
 import presencifyFeaturesImage from "../../public/presencify-features.png"
@@ -39,7 +40,7 @@ const Features: FC = () => {
         <Section.ContentContainer>
           <Section.Title
             className="!text-2xl lg:!text-5xl"
-            title="The single place to manage all your presences"
+            title={SectionsInfo.FEATURES.TITLE}
             inverted={true}
           />
           <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-2 gap-20 mt-5">

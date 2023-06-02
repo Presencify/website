@@ -4,6 +4,7 @@ import Button from "@/components/Button"
 import type { FC } from "react"
 import presencifyUsage from "../../public/presencify-usage.png"
 import { SectionsEnum } from "@/enums.d"
+import { SectionsInfo } from "@/constants/sectionsInfo"
 import { scrollToSection } from "@/utils/scrollToSection"
 
 const Hero: FC = () => {
@@ -11,8 +12,8 @@ const Hero: FC = () => {
     <Section>
       <Section.Container id={SectionsEnum.HOME.toLowerCase()} offset={-400}>
         <Section.ContentContainer>
-          <Section.Title title="Enhance your Discord presence" />
-          <Section.Description description="Display real-time updates from your browser directly in your Discord status. No matters what site you are on, Presencify will show it in your status." />
+          <Section.Title title={SectionsInfo.HOME.TITLE} />
+          <Section.Description description={SectionsInfo.HOME.DESCRIPTION} />
           <div className="flex gap-5">
             <Button variant="green" type="button">
               Download
@@ -22,7 +23,7 @@ const Hero: FC = () => {
               type="button"
               onClick={() => scrollToSection(SectionsEnum.FEATURES)}
             >
-              See features
+              See Features
             </Button>
           </div>
         </Section.ContentContainer>

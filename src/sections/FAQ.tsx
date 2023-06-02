@@ -1,4 +1,5 @@
 import Section from "@/components/Section"
+import { SectionsInfo } from "@/constants/sectionsInfo"
 import { SectionsEnum } from "@/enums.d"
 import type { FC } from "react"
 
@@ -39,10 +40,7 @@ const FAQ: FC = () => {
     <Section>
       <Section.Container id={SectionsEnum.FAQ.toLowerCase()} offset={-320}>
         <Section.ContentContainer className="!flex-auto">
-          <Section.Title
-            className="!text-2xl lg:!text-5xl"
-            title="Frequent questions and answers"
-          />
+          <Section.Title className="!text-2xl lg:!text-5xl" title={SectionsInfo.FAQ.TITLE} />
 
           <div className="items-center w-full mx-auto max-w-7xl text-white">
             <div className="w-full mx-auto text-left">
