@@ -4,7 +4,8 @@ import { scrollToSection } from "@/utils/scrollToSection"
 
 const useNavbar = () => {
   const [activeSection, setActiveSection] = useState("")
-
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => setIsClient(true), [])
   const getSectionsElements = () => {
     const sections = Object.values(SectionsEnum)
     const sectionsElements = []
@@ -33,7 +34,7 @@ const useNavbar = () => {
     }
   }, [])
 
-  return { activeSection, scrollToSection }
+  return { activeSection, scrollToSection, isClient }
 }
 
 export default useNavbar
