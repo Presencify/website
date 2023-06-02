@@ -7,7 +7,11 @@ import presencesNetwork from "../../public/presences-network.png"
 const PresencesList: FC = () => {
   return (
     <Section className="!h-max">
-      <Section.Container id={SectionsEnum.PRECENCES.toLowerCase()} offset={-300}>
+      <Section.Container
+        id={SectionsEnum.PRECENCES.toLowerCase()}
+        offset={-300}
+        // className="!flex-wrap-reverse"
+      >
         <Section.ContentContainer>
           <Section.Title className="!text-2xl lg:!text-5xl" title="Choose your desired presence" />
           <Section.Description description="Browse through our list of presence and choose the one you need. Every presence is created by our community and is free to use." />

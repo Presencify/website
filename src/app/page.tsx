@@ -11,10 +11,10 @@ import CirclesImage from "../../public/circles-image.svg"
 
 const Home: FC = () => {
   return (
-    <div className="w-full h-max flex flex-col bg-dark text-white relative p-5">
+    <div className="w-full h-max flex flex-col gap-32 md:gap-0 bg-dark text-white relative pt-20 md:pt-0 px-5">
       <Header />
       <Hero />
-      <div className="flex flex-col h-max relative overflow-hidden">
+      <div className="flex flex-col gap-32 md:gap-0 h-max relative overflow-hidden">
         <CirclesImage className="w-[120%] ml-[00px] absolute inset-0 top-[100px]" />
         <PresencesList />
         <Features />

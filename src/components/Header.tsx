@@ -16,16 +16,16 @@ const Header: FC = () => {
       <section className="w-full max-w-[1200px] h-max flex justify-between items-center">
         <Logo />
         <button onClick={handleShowResponsiveNavbar}>
-          <Bars4Icon className="w-6 h-6 sm:hidden" />
+          <Bars4Icon className="w-6 h-6 md:hidden" />
         </button>
         <div
           className={`${
             showResponsiveNavbar ? "top-[76px]" : "top-[-400px]"
-          } sm:hidden w-full h-80 bg-[#211d32] absolute inset-0 duration-500 flex justify-center items-center border border-gray-700`}
+          } md:hidden w-full h-max py-5 bg-[#211d32] absolute inset-0 duration-500 flex justify-center items-center border border-gray-700`}
         >
-          <Navbar className="flex-col sm:flex-row gap-10" />
+          <Navbar className="flex-col md:flex-row gap-10" />
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden md:block">
           <Navbar />
         </div>
       </section>

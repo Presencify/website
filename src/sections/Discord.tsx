@@ -6,7 +6,7 @@ import presencifyDiscordImage from "../../public/presencify-discord.png"
 
 const Discord: FC = () => {
   return (
-    <Section className="!h-[500px]">
+    <Section className="!h-max md:!h-[500px]">
       <Section.Container id={SectionsEnum.COMMUNITY.toLowerCase()} offset={-300}>
         <Section.ContentContainer>
           <Section.Title className="!text-2xl lg:!text-5xl" title="Community Discord" />
@@ -20,7 +20,7 @@ const Discord: FC = () => {
             </Button>
           </div>
         </Section.ContentContainer>
-        <Section.ImageContainer>
+        <Section.ImageContainer className="h-max">
           <Section.Image image={presencifyDiscordImage} />
         </Section.ImageContainer>
       </Section.Container>

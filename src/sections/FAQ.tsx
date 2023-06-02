@@ -47,7 +47,7 @@ const FAQ: FC = () => {
           <div className="items-center w-full mx-auto max-w-7xl text-white">
             <div className="w-full mx-auto text-left">
               <div className="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
-                <div className="p-4 mx-auto lg:max-w-7xl lg:p-0">
+                <div className="mx-auto lg:max-w-7xl lg:p-0">
                   <ul
                     role="list"
                     className="grid grid-cols-2 gap-4 list-none lg:grid-cols-3 lg:gap-12"

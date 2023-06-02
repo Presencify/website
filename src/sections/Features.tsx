@@ -35,7 +35,7 @@ const features = {
 const Features: FC = () => {
   return (
     <Section>
-      <Section.Container inverted={true} id={SectionsEnum.FEATURES.toLowerCase()} offset={-300}>
+      <Section.Container inverted={true} id={SectionsEnum.FEATURES.toLowerCase()} offset={-200}>
         <Section.ContentContainer>
           <Section.Title
             className="!text-2xl lg:!text-5xl"

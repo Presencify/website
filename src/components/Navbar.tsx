@@ -8,7 +8,13 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
 
   const scrollToSection = (sectionId: SectionsEnum) => {
     const section = document.getElementById(sectionId.toLowerCase())
-    if (section) section.scrollIntoView({ behavior: "smooth" })
+    if (!section) return
+    if (sectionId.toLowerCase() === SectionsEnum.DOWNLOAD.toLowerCase())
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+      })
+    else section.scrollIntoView({ behavior: "smooth" })
   }
 
   const getSectionsElements = () => {
@@ -41,7 +47,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
 
   return (
     <nav>
-      <ul className={`flex gap-16 ${className}`}>
+      <ul className={`flex gap-10 lg:gap-12 ${className}`}>
         {Object.values(SectionsEnum).map((section, index) => (
           <li
             key={index}

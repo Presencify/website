@@ -7,7 +7,7 @@ import { SectionsEnum } from "@/enums.d"
 const Hero: FC = () => {
   return (
     <Section>
-      <Section.Container id={SectionsEnum.HOME.toLowerCase()}>
+      <Section.Container id={SectionsEnum.HOME.toLowerCase()} offset={-400}>
         <Section.ContentContainer>
           <Section.Title title="Enhance your Discord presence" />
           <Section.Description description="Display real-time updates from your browser directly in your Discord status. No matters what site you are on, Presencify will show it in your status." />

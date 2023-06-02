@@ -12,7 +12,7 @@ import type { FC } from "react"
 import Image from "next/image"
 
 const Section: FC<SectionProps> & ExtendedSection = ({ className, children }) => (
-  <section className={`h-screen flex justify-center items-center relative ${className}`}>
+  <section className={`h-max md:h-screen flex justify-center items-center relative ${className}`}>
     {children}
   </section>
 )
@@ -20,19 +20,18 @@ const Section: FC<SectionProps> & ExtendedSection = ({ className, children }) =>
 const Container: FC<ContainerProps> = ({ className, inverted, children, id, offset }) => {
   return (
     <div
-      className={`h-max w-full max-w-[1200px] flex items-center flex-wrap md:flex-nowrap gap-x-20 gap-y-10 relative ${className} ${
+      className={`h-max w-full max-w-[1200px] flex items-center flex-wrap-reverse md:flex-nowrap gap-x-20 gap-y-10 relative ${className} ${
         inverted ? "flex-row-reverse" : "flex-row"
       }`}
     >
       <div
-        className={`w-full absolute inset-0 h-full ${className} `}
+        className={`w-full absolute inset-0 h-full ${className} section-container`}
         id={id}
         style={{
           top: `${offset}px`,
-          height: `calc("100%" - ${offset}px)`
+          height: `calc(100% - ${offset}px)`
         }}
       ></div>
-
       {children}
     </div>
   )
@@ -59,7 +58,7 @@ const Description: FC<DescriptionProps> = ({ className, description }) => (
 const ImageContainer: FC<ImageContainerProps> = ({ className, inverted, children }) => {
   return (
     <div
-      className={`w-full lg:w-[400px] rounded-md h-80 flex justify-center items-center md:absolute top-0 ${
+      className={`w-full lg:w-[400px] rounded-md h-80 flex justify-center items-center lg:absolute top-0 ${
         inverted ? "left-0" : "right-0"
       } ${className} `}
     >

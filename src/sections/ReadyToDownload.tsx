@@ -7,11 +7,11 @@ import horizontalLinesImage from "../../public/horizontal-lines.png"
 
 const ReadyToDownload: FC = () => {
   return (
-    <Section className="relative">
+    <Section className="!h-96 md:!h-screen relative">
       <Section.Container
         className="justify-center"
         id={SectionsEnum.DOWNLOAD.toLowerCase()}
-        offset={-600}
+        offset={-500}
       >
         <Section.ContentContainer>
           <Section.Title
