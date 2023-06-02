@@ -1,8 +1,10 @@
+"use client"
 import Section from "@/components/Section"
 import Button from "@/components/Button"
 import type { FC } from "react"
 import presencifyUsage from "../../public/presencify-usage.png"
 import { SectionsEnum } from "@/enums.d"
+import { scrollToSection } from "@/utils/scrollToSection"
 
 const Hero: FC = () => {
   return (
@@ -15,8 +17,12 @@ const Hero: FC = () => {
             <Button variant="green" type="button">
               Download
             </Button>
-            <Button variant="transparent" type="button">
-              Download
+            <Button
+              variant="transparent"
+              type="button"
+              onClick={() => scrollToSection(SectionsEnum.FEATURES)}
+            >
+              See features
             </Button>
           </div>
         </Section.ContentContainer>

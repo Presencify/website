@@ -25,7 +25,7 @@ const Container: FC<ContainerProps> = ({ className, inverted, children, id, offs
       }`}
     >
       <div
-        className={`w-full absolute inset-0 h-full ${className} section-container`}
+        className={`w-full absolute inset-0 h-full ${className} section-container pointer-events-none`}
         id={id}
         style={{
           top: `${offset}px`,
