@@ -12,16 +12,27 @@ import type { FC } from "react"
 import Image from "next/image"
 
 const Section: FC<SectionProps> & ExtendedSection = ({ className, children }) => (
-  <section className={`h-screen flex justify-center items-center ${className}`}>{children}</section>
+  <section className={`h-screen flex justify-center items-center relative ${className}`}>
+    {children}
+  </section>
 )
 
-const Container: FC<ContainerProps> = ({ className, inverted, children }) => {
+const Container: FC<ContainerProps> = ({ className, inverted, children, id, offset }) => {
   return (
     <div
       className={`h-max w-full max-w-[1200px] flex items-center flex-wrap md:flex-nowrap gap-x-20 gap-y-10 relative ${className} ${
         inverted ? "flex-row-reverse" : "flex-row"
       }`}
     >
+      <div
+        className={`w-full absolute inset-0 h-full ${className} `}
+        id={id}
+        style={{
+          top: `${offset}px`,
+          height: `calc("100%" - ${offset}px)`
+        }}
+      ></div>
+
       {children}
     </div>
   )

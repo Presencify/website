@@ -1,13 +1,18 @@
 import Image from "next/image"
 import Section from "@/components/Section"
 import Button from "@/components/Button"
+import { SectionsEnum } from "@/enums.d"
 import type { FC } from "react"
 import horizontalLinesImage from "../../public/horizontal-lines.png"
 
 const ReadyToDownload: FC = () => {
   return (
-    <Section className="!h-[500px] relative">
-      <Section.Container className="justify-center">
+    <Section className="relative">
+      <Section.Container
+        className="justify-center"
+        id={SectionsEnum.DOWNLOAD.toLowerCase()}
+        offset={-600}
+      >
         <Section.ContentContainer>
           <Section.Title
             className="!text-2xl lg:!text-5xl text-center"

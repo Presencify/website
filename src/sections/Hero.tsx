@@ -2,11 +2,12 @@ import Section from "@/components/Section"
 import Button from "@/components/Button"
 import type { FC } from "react"
 import presencifyUsage from "../../public/presencify-usage.png"
+import { SectionsEnum } from "@/enums.d"
 
 const Hero: FC = () => {
   return (
     <Section>
-      <Section.Container>
+      <Section.Container id={SectionsEnum.HOME.toLowerCase()}>
         <Section.ContentContainer>
           <Section.Title title="Enhance your Discord presence" />
           <Section.Description description="Display real-time updates from your browser directly in your Discord status. No matters what site you are on, Presencify will show it in your status." />

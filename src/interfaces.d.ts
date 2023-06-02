@@ -1,5 +1,6 @@
 import { Url } from "next/dist/shared/lib/router/router"
 import { StaticImageData } from "next/image"
+import { SectionsEnum } from "./enums"
 
 export type Variants = {
   green: string
@@ -35,6 +36,8 @@ export interface ContainerProps {
   className?: string
   children: React.ReactNode
   inverted: boolean
+  id: SectionsEnum
+  offset: number
 }
 
 export interface ContentContainerProps {
@@ -75,4 +78,12 @@ export type ExtendedSection = {
   ImageContainer: FC<ImageContainerProps>
 } & {
   Image: FC<ImageProps>
+}
+
+export interface refProps {
+  current: HTMLDivElement | null
+}
+
+export interface SectionRefs {
+  [key: string]: RefObject<HTMLDivElement>
 }

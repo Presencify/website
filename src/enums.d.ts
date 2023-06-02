@@ -1,7 +1,8 @@
 export enum SectionsEnum {
   HOME = "Home",
+  PRECENCES = "Precences",
   FEATURES = "Features",
-  CONTACT = "Contact",
+  COMMUNITY = "Community",
   FAQ = "FAQ",
   DOWNLOAD = "Download"
 }

@@ -1,4 +1,5 @@
 import Section from "@/components/Section"
+import { SectionsEnum } from "@/enums.d"
 import type { FC } from "react"
 
 const QUESTION_ANSWERS = [
@@ -36,7 +37,7 @@ const QUESTION_ANSWERS = [
 const FAQ: FC = () => {
   return (
     <Section>
-      <Section.Container>
+      <Section.Container id={SectionsEnum.FAQ.toLowerCase()} offset={-320}>
         <Section.ContentContainer className="!flex-auto">
           <Section.Title
             className="!text-2xl lg:!text-5xl"

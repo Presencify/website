@@ -1,4 +1,5 @@
 import Section from "@/components/Section"
+import { SectionsEnum } from "@/enums.d"
 import type { FC } from "react"
 import presencifyFeaturesImage from "../../public/presencify-features.png"
 import EasyInterfaceIcon from "../../public/easy-interface-icon.svg"
@@ -34,7 +35,7 @@ const features = {
 const Features: FC = () => {
   return (
     <Section>
-      <Section.Container inverted={true}>
+      <Section.Container inverted={true} id={SectionsEnum.FEATURES.toLowerCase()} offset={-300}>
         <Section.ContentContainer>
           <Section.Title
             className="!text-2xl lg:!text-5xl"
