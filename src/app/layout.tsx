@@ -1,6 +1,5 @@
 import "./globals.css"
 import { Commissioner } from "next/font/google"
-
 const inter = Commissioner({ subsets: ["latin"] })
 
 export const metadata = {
@@ -11,6 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.svg" />
+      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         {children}
       </body>
