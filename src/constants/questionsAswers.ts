@@ -11,7 +11,7 @@ export const QUESTION_ANSWERS = [
   {
     QUESTION: "How can I start using Presencify?",
     ANSWER:
-      "You can first download Presencify from our website and then execute it. After that, you can start using it by looking for your website in the precenses list and clicking on it."
+      "You can first download Presencify from our website and then execute it. After that, you can start using it by looking for your website in the presences list and clicking on it."
   },
   {
     QUESTION: "I can't get Presencify to work. What should I do?",

@@ -2,9 +2,9 @@ export const SectionsInfo = {
   HOME: {
     TITLE: "Enhance your Discord presence",
     DESCRIPTION:
-      "Show your friends what you are doing on the web with Precensify. Display real-time updates from your browser directly in your Discord status."
+      "Show your friends what you are doing on the web with Presensify. Display real-time updates from your browser directly in your Discord status."
   },
-  PRECENSES: {
+  PRESENCES: {
     TITLE: "Choose your desired presence",
     DESCRIPTION:
       "Browse through our list of presence and choose the one you need. Every presence is created by our community and is free to use."

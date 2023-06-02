@@ -23,7 +23,7 @@ const features = {
     image: <InternetIcon className="w-10 h-10" />,
     title: "A world of presences",
     description:
-      "Presencify is compatible with a lot of websites. You can find your website in our precenses list."
+      "Presencify is compatible with a lot of websites. You can find your website in our presences list."
   },
   bolt: {
     image: <BoltIcon className="w-10 h-10" />,

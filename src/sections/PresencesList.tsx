@@ -8,10 +8,10 @@ import presencesNetwork from "../../public/presences-network.png"
 const PresencesList: FC = () => {
   return (
     <Section className="!h-max">
-      <Section.Container id={SectionsEnum.PRECENCES.toLowerCase()} offset={-300}>
+      <Section.Container id={SectionsEnum.PRESENCES.toLowerCase()} offset={-300}>
         <Section.ContentContainer>
-          <Section.Title className="!text-2xl lg:!text-5xl" title={SectionsInfo.PRECENSES.TITLE} />
-          <Section.Description description={SectionsInfo.PRECENSES.DESCRIPTION} />
+          <Section.Title className="!text-2xl lg:!text-5xl" title={SectionsInfo.PRESENCES.TITLE} />
+          <Section.Description description={SectionsInfo.PRESENCES.DESCRIPTION} />
           <Button variant="green" type="button">
             Visit list
           </Button>
