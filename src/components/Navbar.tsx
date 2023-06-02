@@ -1,49 +1,11 @@
 "use client"
-import { useEffect, type FC, useState } from "react"
+import { type FC } from "react"
 import type { NavbarProps } from "@/interfaces.d"
 import { SectionsEnum } from "@/enums.d"
+import useNavbar from "@/hooks/useNavbar"
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
-  const [activeSection, setActiveSection] = useState("")
-
-  const scrollToSection = (sectionId: SectionsEnum) => {
-    const section = document.getElementById(sectionId.toLowerCase())
-    if (!section) return
-    if (sectionId.toLowerCase() === SectionsEnum.DOWNLOAD.toLowerCase())
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth"
-      })
-    else section.scrollIntoView({ behavior: "smooth" })
-  }
-
-  const getSectionsElements = () => {
-    const sections = Object.values(SectionsEnum)
-    const sectionsElements = []
-    for (const section of sections) {
-      const sectionElement = document.getElementById(section.toLowerCase())
-      if (sectionElement)
-        sectionsElements.push({ name: section, element: sectionElement.getBoundingClientRect() })
-    }
-    return sectionsElements
-  }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = getSectionsElements()
-      const scrollPosition = window.scrollY
-      const activeSection = sections.find(section => {
-        const top = section.element.top + scrollPosition
-        const bottom = top + section.element.height
-        return scrollPosition >= top && scrollPosition < bottom
-      })
-      setActiveSection(activeSection ? activeSection.name.toLowerCase() : "")
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+  const { activeSection, scrollToSection } = useNavbar()
 
   return (
     <nav>
