@@ -87,3 +87,44 @@ export interface refProps {
 export interface SectionRefs {
   [key: string]: RefObject<HTMLDivElement>
 }
+
+export interface FilterOptionProps {
+  value: string
+  label: string
+  checked: boolean
+}
+
+export interface FiltersProps {
+  id: string
+  name: string
+  options: FilterOptionProps[]
+}
+
+export interface FilterProps {
+  section: FiltersProps
+  option: FilterOptionProps
+  optionIdx: number
+}
+
+export interface SortOptionsProps {
+  name: string
+  href: string
+  current: boolean
+}
+
+export interface SortOptionProps {
+  option: {
+    name: string
+    href: string
+    current: boolean
+  }
+}
+
+export interface MobileFilterSidebarProps {
+  open: boolean
+  onClose: () => void
+}
+
+export interface PresencesHeaderProps {
+  onClick: () => void
+}
