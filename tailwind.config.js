@@ -46,8 +46,11 @@ module.exports = {
       "pink-17": "#400e34",
       "pink-18": "#20071a",
       "dark": "#181526",
+      "dark-2": "#342f54"
     }
     },
   },
-  plugins: [],
+  plugins: [
+      require('@tailwindcss/forms'),
+  ],
 }
