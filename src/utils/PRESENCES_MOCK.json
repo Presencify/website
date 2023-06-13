@@ -1,0 +1,74 @@
+[
+  {
+    "client_id": "1113134454945362081",
+    "name": "Youtube",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/youtube-icon.png",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362082",
+    "name": "Facebook",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/facebook-icon.svg",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362083",
+    "name": "Twitter",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/twitter-icon.png",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362084",
+    "name": "Instagram",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/instagram-icon.png",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362085",
+    "name": "Linkedin",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/linkedin-icon.png",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362086",
+    "name": "Twitch",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/twitch-icon.webp",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362087",
+    "name": "Spotify",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/spotify-icon.png",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362088",
+    "name": "Netflix",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enimorum",
+    "image": "/netflix-icon.webp",
+    "version": "1.0.0"
+  },
+  {
+    "client_id": "1113134454945362089",
+    "name": "Google",
+    "author": "manucabral",
+    "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "image": "/google-icon.webp",
+    "version": "1.0.0"
+  }
+]
