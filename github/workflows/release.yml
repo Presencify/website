@@ -1,21 +1,38 @@
-name: Publicar última versión
+name: Actualización automática del programa
 
 on:
   release:
     types:
-      - created
+      - published
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
-steps:
-  - name: Obtener última versión del programa
-    id: latest_release
-    run: |
-      echo "::set-output name=version::$(curl -s https://api.github.com/repos/Presencify/Presencify/releases/latest | grep -oP '\"tag_name\": \"\K(.*)(?=\")')"
+    steps:
+      - name: Obtener la última versión
+        id: latest_release
+        run: |
+          echo "::set-output name=tag_name::$(curl -s https://api.github.com/repos/Presencify/Presencify/releases/latest | grep -oP '\"tag_name\": \"\K(.*?)(?=\")')"
 
-  - name: Descargar archivo del programa
-    run: |
-      wget -O programa.zip "https://github.com/Presencify/Presencify/releases/download/${{ steps.latest_release.outputs.version }}/Presencify.v${{ steps.latest_release.outputs.version }}.zip"
-      cp programa.zip /public
+      - name: Descargar el archivo
+        run: |
+          curl -LO "https://github.com/Presencify/Presencify/releases/latest/download/Presencify.v${{ steps.latest_release.outputs.tag_name }}.zip"
+          unzip "Presencify.v${{ steps.latest_release.outputs.tag_name }}.zip"
+
+      - name: Obtener nombre de la carpeta
+        id: folder_name
+        run: |
+          echo "::set-output name=folder_name::$(unzip -l "Presencify.v${{ steps.latest_release.outputs.tag_name }}.zip" | grep -oP "(?<=Presencify.v${{ steps.latest_release.outputs.tag_name }}/).*?(?=/)")"
+
+      - name: Copiar programa a la carpeta /public
+        run: |
+          cp -r "${{ steps.folder_name.outputs.folder_name }}" public/
+
+      - name: Confirmar cambios
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add -A
+          git commit -m "Actualizar programa automáticamente"
+          git push
