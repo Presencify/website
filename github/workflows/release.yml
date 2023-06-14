@@ -23,7 +23,7 @@ jobs:
       - name: Obtener nombre de la carpeta
         id: folder_name
         run: |
-          echo "::set-output name=folder_name::$(unzip -l "Presencify.v${{ steps.latest_release.outputs.tag_name }}.zip" | grep -oP "(?<=Presencify.v${{ steps.latest_release.outputs.tag_name }}/).*?(?=/)")"
+          echo "::set-output name=folder_name::$(unzip -l "Presencify.v${{ steps.latest_release.outputs.tag_name }}.zip" | grep -oP "(?<=Presencify.v${{ steps.latest_release.outputs.tag_name }} ).*?(?=/)")"
 
       - name: Copiar programa a la carpeta /public
         run: |
