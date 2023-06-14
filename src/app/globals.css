@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-y: scroll !important;
+}
+
 @media screen and (max-width: 1024px) {
   .section-container {
     top: 0 !important;
