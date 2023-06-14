@@ -23,31 +23,33 @@ const Presences: FC = () => {
                 <Filters />
               </form>
               <div className="lg:col-span-3">
-                <ul className="w-full h-max flex flex-wrap gap-10">
+                <ul className="w-full h-max flex flex-wrap justify-center gap-10">
                   {PRESENCES_MOCK.map(item => (
                     <li
                       key={item.client_id}
-                      className="w-[400px] h-max border border-green-1 p-5 rounded-md"
+                      className="min-w-[200px] flex-1 h-max min-h-[250px] border border-gray-700 p-5 rounded-md hover:border-green-1 cursor-pointer duration-150"
                     >
-                      <article className="flex flex-col gap-5 ">
-                        <header className="flex gap-0">
-                          <div className="w-2/3 flex justify-center items-center">
-                            <div className="w-20 h-20 relative">
+                      <article className="flex flex-col gap-5">
+                        <header className="flex gap-4">
+                          <div className="w-1/3 flex items-center rounded-full">
+                            <div className="w-14 lg:w-16 h-14 lg:h-16 relative rounded-full">
                               <Image
-                                className="object-cover"
+                                className="object-cover rounded-full"
                                 src={item?.image}
                                 fill={true}
                                 alt={`Thumbnail of ${item?.name}`}
                               />
                             </div>
                           </div>
-                          <div className="w-2/3 flex flex-col gap-3">
-                            <h3 className="text-xl leading-none">{item?.name}</h3>
+                          <div className="w-2/3 flex flex-col">
+                            <h3 className="text-lg lg:text-xl leading-none text-green-1">
+                              {item?.name}
+                            </h3>
                             <span className="text-gray-400">{item?.author}</span>
                           </div>
                         </header>
                         <footer>
-                          <p>{item?.description}</p>
+                          <p className="text-sm lg:text-base">{item?.description}</p>
                         </footer>
                       </article>
                     </li>
