@@ -1,0 +1,21 @@
+name: Publicar última versión
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+steps:
+  - name: Obtener última versión del programa
+    id: latest_release
+    run: |
+      echo "::set-output name=version::$(curl -s https://api.github.com/repos/Presencify/Presencify/releases/latest | grep -oP '\"tag_name\": \"\K(.*)(?=\")')"
+
+  - name: Descargar archivo del programa
+    run: |
+      wget -O programa.zip "https://github.com/Presencify/Presencify/releases/download/${{ steps.latest_release.outputs.version }}/Presencify.v${{ steps.latest_release.outputs.version }}.zip"
+      cp programa.zip /public
