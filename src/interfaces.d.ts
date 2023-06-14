@@ -94,18 +94,6 @@ export interface FilterOptionProps {
   checked: boolean
 }
 
-export interface FiltersProps {
-  id: string
-  name: string
-  options: FilterOptionProps[]
-}
-
-export interface FilterProps {
-  section: FiltersProps
-  option: FilterOptionProps
-  optionIdx: number
-}
-
 export interface SortOptionsProps {
   name: string
   href: string
